@@ -37,5 +37,30 @@ console.log("ex2")
 console.log(res)
 
 /*** https://projecteuler.net/problem=3 ***/
+const target = 10  ;
+let factor = Math.trunc(Math.sqrt(target))
+let b=false
+
+const isPrime =(p)=> {
+    for(let a =2; a< Math.sqrt(p);a++){
+        // Check if n is less than 2 => not primesi <=2, pas premier
+        if (p<2) return false;
+        ///Si p n'est pas un nombre premier, il existe nécessairement un diviseur dans cet interval
+        if(p%a ===0) return false
+    }
+    return true
+}
+
+while(!b){
+    console.log(factor)
+    if(target%factor === 0 && isPrime(factor)) {
+        b= true
+    }else{
+        factor -=1
+    }
+
+}
+console.log("ex3")
+console.log(factor)
 
 
