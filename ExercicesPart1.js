@@ -64,3 +64,25 @@ console.log(factor)
 
 /*** https://projecteuler.net/problem=4 ***/
 
+const isAPalindrome = (pal)=>{
+        for(i=0, j=pal.toString().length-1; i<=pal.toString().length/2,j>= pal.toString().length/2; i++, j--){
+            if(pal.toString()[i] !== pal.toString()[j]) return false
+        }
+        return true
+}
+
+console.log("ex4")
+res=0
+for(r=100;r<1000; r++ ){
+    for(s=100;s<1000;s++){
+        let tmp =r*s
+
+        if(isAPalindrome(tmp) && tmp> res) {
+            res=tmp
+        }
+    }
+}
+console.log(res)
+
+
+/*** https://projecteuler.net/problem=5 ***/
