@@ -37,7 +37,7 @@ console.log("ex2")
 console.log(res)
 
 /*** https://projecteuler.net/problem=3 ***/
-const target = 10  ;
+const target = 600851475143   ;
 let factor = Math.trunc(Math.sqrt(target))
 let b=false
 
@@ -52,7 +52,6 @@ const isPrime =(p)=> {
 }
 
 while(!b){
-    console.log(factor)
     if(target%factor === 0 && isPrime(factor)) {
         b= true
     }else{
@@ -63,4 +62,5 @@ while(!b){
 console.log("ex3")
 console.log(factor)
 
+/*** https://projecteuler.net/problem=4 ***/
 
